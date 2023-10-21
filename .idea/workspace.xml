@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60337e79-8142-449c-a3e8-ebdc2cdf09b7" name="Changes" comment="Erstellung der Klasse WortListe">
-      <change beforePath="$PROJECT_DIR$/src/adomele/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adomele/Main.java" afterDir="false" />
+    <list default="true" id="60337e79-8142-449c-a3e8-ebdc2cdf09b7" name="Changes" comment="Testung der Klasse Wortliste">
+      <change afterPath="$PROJECT_DIR$/src/adomele/WortTrainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697904401065</updated>
-      <workItem from="1697904402097" duration="1213000" />
+      <workItem from="1697904402097" duration="1534000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore hinzugefügt">
       <created>1697904583441</created>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697905519956</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Testung der Klasse Wortliste">
+      <created>1697905797554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697905797554</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +110,8 @@
     <MESSAGE value="Hinzufügen der Klasse WortEintrag mit den Methoden aus der Angabe" />
     <MESSAGE value="Testen der Klasse WortEintrag" />
     <MESSAGE value="Erstellung der Klasse WortListe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erstellung der Klasse WortListe" />
+    <MESSAGE value="Testung der Klasse Wortliste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testung der Klasse Wortliste" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
