@@ -19,5 +19,9 @@ public class Main {
         System.out.println(wortListe);
         wortListe.loescheWortEintrag("Auto");
         System.out.println(wortListe);
+
+        WortTrainer trainer = new WortTrainer(wortListe);
+        System.out.println(trainer.check("fahren"));
+
     }
 }
