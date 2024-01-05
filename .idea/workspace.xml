@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60337e79-8142-449c-a3e8-ebdc2cdf09b7" name="Changes" comment="Statistik">
-      <change afterPath="$PROJECT_DIR$/src/adomele/SpeichernundLaden.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/adomele/WortListe_Control.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/adomele/WortListe_Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/adomele/WortListe_Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adomele/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adomele/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adomele/SpeichernundLaden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adomele/SpeichernundLaden.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adomele/WortListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adomele/WortListe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adomele/WortListeControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adomele/WortTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adomele/WortTrainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +160,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/adomele/Main.java</url>
-          <line>13</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
