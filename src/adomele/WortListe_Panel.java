@@ -43,3 +43,67 @@ public class WortListe_Panel extends JPanel {
         panelcenter = new JPanel();
         panelcenter.setLayout(new GridLayout());
         bild = new JLabel();
+
+        richtigeWZahl = new JLabel("0");
+        richtigeWZahl.setFont(new Font("font", Font.ITALIC, 15));
+        richtigeWZahl.setHorizontalAlignment(SwingConstants.CENTER);
+        panelbottom.add(richtigeWZahl);
+
+        refresh = new JButton("Zurücksetzen");
+        refresh.addActionListener(control);
+        refresh.setActionCommand("refresh");
+        panelbottom.add(refresh);
+
+        anzahlW = new JLabel("Abgefragte Wörter:");
+        anzahlW.setFont(new Font("font", Font.ITALIC, 15));
+        panelbottom.add(anzahlW);
+
+        anzahlWZahl = new JLabel("0");
+        anzahlWZahl.setFont(new Font("font", Font.ITALIC, 15));
+        anzahlWZahl.setHorizontalAlignment(SwingConstants.CENTER);
+        panelbottom.add(anzahlWZahl);
+
+        addWort = new JButton("Wort hinzufügen");
+        addWort.addActionListener(control);
+        addWort.setActionCommand("neu");
+        panelbottom.add(addWort);
+        this.add(panelbottom, BorderLayout.PAGE_END);
+    }
+
+    /**
+     * Liefert den eingegeben Text zurück
+     * @return der Text im JTextField
+     */
+    public String getEingabe(){
+        return eingabe.getText();
+    }
+
+    /**
+     * Refresh Methode wird aufgerufen nachdem der neues Wort Button gedrückt wird.
+     * @param richtige anzahl der richtigen Wörter
+     * @param abgefragt anzahl der abgefragten Wörter
+     * @param url die URL für das Bild
+     * @throws MalformedURLException falls die URL nicht aufgerufen werden kann
+     */
+    public void refresh(int richtige, int abgefragt, String url) throws MalformedURLException {
+        richtigeWZahl.setText(Integer.toString(richtige));
+        anzahlWZahl.setText(Integer.toString(abgefragt));
+        eingabe.setText("");
+        setBild(url);
+
+    }
+
+    /**
+     * setBild wird aufgerufen jedes mal, wenn das Bild neugeladen werden soll
+     * @param url die URL für das Bild
+     * @throws MalformedURLException falls die URL nicht aufgerufen werden kann
+     */
+    public void setBild(String url) throws MalformedURLException {
+        ImageIcon icon = new ImageIcon(new URL(url));
+        Image image = icon.getImage();
+
+        int width = image.getWidth(observer) * 250 / image.getHeight(observer); //berechnet die Breite des Bildes in Relation zur ursprünglichen Breite bei einer Höhenänderung zu 250px
+        image = image.getScaledInstance(width, 250,  Image.SCALE_SMOOTH); // skalieren auf gewünschte Größe
+        bild.setIcon(new ImageIcon(image));
+    }
+}
