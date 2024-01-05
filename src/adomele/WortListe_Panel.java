@@ -43,6 +43,28 @@ public class WortListe_Panel extends JPanel {
         panelcenter = new JPanel();
         panelcenter.setLayout(new GridLayout());
         bild = new JLabel();
+        bild.setLayout(new BorderLayout());
+        bild.setPreferredSize(new Dimension(0, 200));
+
+        ImageIcon icon = new ImageIcon(new URL(url));
+        observer = new ImageObserver() {
+            @Override
+            public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
+                return false;
+            }
+        };
+        Image image = icon.getImage();
+        double width = image.getWidth(observer) * 250 / image.getHeight(observer); //berechnet die Breite des Bildes in Relation zur ursprünglichen Breite bei einer Höhenänderung zu 250px
+        image = image.getScaledInstance((int) width, 250,  Image.SCALE_SMOOTH); // skalieren auf gewünschte Größe
+        this.bild = new JLabel(new ImageIcon(image)); // anzeigen in einem JLabel
+        this.panelcenter.add(this.bild);
+        this.add(this.panelcenter, BorderLayout.CENTER);
+
+        panelbottom = new JPanel();
+        panelbottom.setLayout(new GridLayout(2, 3));
+        richtigeW = new JLabel("Richtige Wörter:");
+        richtigeW.setFont(new Font("font", Font.ITALIC, 15));
+        panelbottom.add(richtigeW);
 
         richtigeWZahl = new JLabel("0");
         richtigeWZahl.setFont(new Font("font", Font.ITALIC, 15));
