@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60337e79-8142-449c-a3e8-ebdc2cdf09b7" name="Changes" comment="testung" />
+    <list default="true" id="60337e79-8142-449c-a3e8-ebdc2cdf09b7" name="Changes" comment="Statistik">
+      <change afterPath="$PROJECT_DIR$/src/adomele/SpeichernundLaden.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
