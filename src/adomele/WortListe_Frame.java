@@ -10,7 +10,7 @@ import java.io.IOException;
  * Klasse Frame erstellt ein Fenster und fügt das panel in das Fenster ein.
  * WindowAdapter wird als WindowListener verwendet und ruft eine laden Methode auf beim
  * Schließen des Fensters
- * @author Julian Burisic
+ * @author Alex Domele
  * @version 2023-11-17
  */
 public class WortListe_Frame extends JFrame{
