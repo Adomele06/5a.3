@@ -19,7 +19,7 @@ public class WortListe {
         }
         return null;
     }
-//D
+//Dd
     public boolean fuegeWortEintragHinzu(WortEintrag eintrag) {
         if (anzahlEintraege < eintraege.length) {
             eintraege[anzahlEintraege] = eintrag;
