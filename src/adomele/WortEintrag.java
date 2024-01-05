@@ -1,43 +1,97 @@
 package adomele;
-
+/**
+ * Klasse WortEintrag mit allen dazugehörigen Methoden
+ * @author Alex Domele
+ * @version 2023-09-23
+ */
 public class WortEintrag {
-    private String wort;
-    private String url;
+    private String wort, url;
 
+    /**
+     * Konstrukor WortEintrag
+     * @param wort Attribut wort als String
+     * @param url Attribute url als String
+     */
     public WortEintrag(String wort, String url) {
-        this.wort = wort;
-        this.url = url;
+        setWort(wort);
+        setUrl(url);
     }
 
+    /**
+     * Setter Methode für das wort Attribut
+     * @param wort Parameter
+     */
+    public void setWort(String wort) {
+        if(wort != null) {
+            this.wort = wort;
+        }
+        else {
+            throw new IllegalArgumentException("Parameter ist leer!");
+        }
+    }
+
+    /**
+     * Setter Methode für das url Attribut
+     * @param url Parameter
+     */
+    public void setUrl(String url) {
+        if(checkURL(url)){
+            this.url = url;
+        }
+        else {
+            throw new IllegalArgumentException("URL ist falsch");
+        }
+    }
+
+    /**
+     * Getter Methode für wort
+     * @return gibt Stand des Attributs wort zurück
+     */
     public String getWort() {
         return wort;
     }
 
-    public void setWort(String wort) {
-        if(wort.length() <2){
-            throw new IllegalArgumentException("Zu kurz");
-        }
-        this.wort = wort;
-    }
-
+    /**
+     * Getter Methode für url
+     * @return gibt Stand des Attributs url zurück
+     */
     public String getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
-        if(!checkURL(url)){
-            throw new IllegalArgumentException("URL nicht gültig");
-        }
-        this.url = url;
-    }
-
+    /**
+     * Methode checkURL überprüft ob Parameter ein gültiges URL ist
+     * @param url Parameter
+     * @return gibt, an ob die URL gültig ist oder nicht
+     */
     public static boolean checkURL(String url) {
-        return url.matches("^(http|https)://[a-zA-Z]+\\.[a-zA-Z]+$");
+        if(url != null) {
+            if(url.length() > 9) {
+                String substringshort = url.substring(0, 7);
+                if(substringshort.equals("http://")){
+                    if(Character.isLetter(url.charAt(7))) {
+                        return true;
+                    }
+                }
+                String substringlong = url.substring(0, 8);
+                if(substringlong.equals("https://")) {
+                    if(Character.isLetter(url.charAt(8))) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            return false;
+        }
+        throw new IllegalArgumentException("URL ist leer!");
     }
 
+    /**
+     * Überschriebene Methode toString
+     * @return Attribute des Objekts getrennt mit einem Strichpunkt
+     */
     @Override
     public String toString() {
-        return wort + ";" + url;
+        return this.wort + "; " + this.url;
     }
 }
-
