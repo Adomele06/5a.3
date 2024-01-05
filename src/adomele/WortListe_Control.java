@@ -44,3 +44,33 @@ public class WortListe_Control implements ActionListener {
      * Methode aus ActionListener bestimmt den Ablauf nach dem Drücken eines Buttons
      * @param e the event to be processed
      */
+    public void actionPerformed(ActionEvent e){
+        String action = e.getActionCommand();
+        if(action.equals("refresh")){
+            trainer.getRandomEintrag();
+            try {
+                panel.refresh(0, 0, trainer.getURL());
+            } catch (MalformedURLException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+        if (action.equals("neu")){
+            String eingabe = panel.getEingabe();
+            trainer.check(eingabe);
+            trainer.getRandomEintrag();
+            try {
+                panel.refresh(trainer.getRichtige(), trainer.getAbgefragt(), trainer.getURL());
+            } catch (MalformedURLException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+    }
+
+    /**
+     * Main Methode
+     * @param args
+     */
+    public static void main(String[] args){
+        new WortListe_Control();
+    }
+}
