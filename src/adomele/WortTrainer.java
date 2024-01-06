@@ -182,4 +182,7 @@ public class WortTrainer {
     public int getAbgefragt(){
         return statistik.getAbgefragt();
     }
+    public void resetStatistik() {
+        this.statistik = new Statistik();
+    }
 }

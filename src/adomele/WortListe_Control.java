@@ -48,6 +48,7 @@ public class WortListe_Control implements ActionListener {
         String action = e.getActionCommand();
         if(action.equals("refresh")){
             trainer.getRandomEintrag();
+            trainer.resetStatistik();
             try {
                 panel.refresh(0, 0, trainer.getURL());
             } catch (MalformedURLException ex) {
@@ -58,6 +59,12 @@ public class WortListe_Control implements ActionListener {
             String eingabe = panel.getEingabe();
             trainer.check(eingabe);
             trainer.getRandomEintrag();
+            try {
+                SpeichernundLaden.speichern(trainer);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+
             try {
                 panel.refresh(trainer.getRichtige(), trainer.getAbgefragt(), trainer.getURL());
             } catch (MalformedURLException ex) {
