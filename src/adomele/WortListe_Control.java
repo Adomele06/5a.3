@@ -21,7 +21,7 @@ public class WortListe_Control implements ActionListener {
     public WortListe_Control(){
         try{
             trainer = new WortTrainer(new WortListe(2));
-            trainer.laden("C:\\Users\\julia\\OneDrive\\OneDrive - tgm - Die Schule der Technik\\Dokumente\\3AHIT_burisic\\WortTrainer.txt");
+            trainer.laden("C:\\Users\\alexa\\IdeaProjects\\Verschluesselung\\Spieldaten.txt");
             panel = new WortListe_Panel(this, trainer.getURL());
             new WortListe_Frame(panel, this.trainer);
         }
